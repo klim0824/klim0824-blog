@@ -15,7 +15,16 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "src",
-    "importHelpers": true
+    "importHelpers": true,
+    "paths": {
+      "~/components/*": ["components/*"],
+      "~/libs/*": ["libs/*"],
+      "~/pages/*": ["pages/*"],
+      "~/styles/*": ["styles/*"],
+      "~/theme/*": ["theme/*"],
+      "~/utiles/*": ["utiles/*"],
+      "~/public/*": ["../public/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
