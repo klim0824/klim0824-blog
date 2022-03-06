@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "lint:markup": "markuplint **/*.tsx",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'"
   },
   "dependencies": {
@@ -16,11 +17,14 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@markuplint/jsx-parser": "^2.1.0",
+    "@markuplint/react-spec": "^2.0.0",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.5.0",
+    "markuplint": "^2.2.0",
     "prettier": "^2.5.1",
     "typescript": "4.6.2"
   }
