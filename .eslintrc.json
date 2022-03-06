@@ -5,6 +5,9 @@
     "plugin:react/recommended",
     "prettier"
   ],
+  "globals": {
+    "JSX": true
+  },
   "rules": {
     "import/order": [
       "error",
