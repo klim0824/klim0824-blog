@@ -1,0 +1,6 @@
+.next/*
+next.config.js
+next-seo.config.js
+**/node_modules/*
+**/out/*
+**/.next/*
