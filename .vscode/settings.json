@@ -5,5 +5,13 @@
     "activityBar.border": "#223678",
     "activityBarBadge.background": "#223678",
     "activityBarBadge.foreground": "#fff"
+  },
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
