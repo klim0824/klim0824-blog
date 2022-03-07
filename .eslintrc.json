@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "prettier"
-  ],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "prettier"],
   "globals": {
     "JSX": true
   },
