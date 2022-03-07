@@ -32,20 +32,20 @@ type Article = Common<{
 
 export type TagsList = ListContents<Tag>
 
-export type Tag = Common<{
+type Tag = Common<{
   tag?: string
   icon?: image
 }>
 
 export type CategoriesList = ListContents<Category>
 
-export type Category = Common<{
+type Category = Common<{
   name?: string
 }>
 
 export type AccountsList = ListContents<Account>
 
-export type Account = Common<{
+type Account = Common<{
   name?: string
   url?: string
   image?: image
