@@ -3,6 +3,7 @@ import React from 'react'
 import { InferGetStaticPropsType, NextPage } from 'next'
 
 import Header from 'components/Header'
+import Sidebar from 'components/Sidebar'
 import {
   fetchArticles,
   fetchTags,
@@ -16,7 +17,12 @@ type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 const Home: NextPage<PageProps> = (props) => {
   const { articles, tags, categories, accounts, meta } = props
 
-  return <Header title={meta.title} />
+  return (
+    <>
+      <Header title={meta.title} />
+      <Sidebar accounts={accounts} meta={meta} />
+    </>
+  )
 }
 export const getStaticProps = async () => {
   const articles = await fetchArticles()

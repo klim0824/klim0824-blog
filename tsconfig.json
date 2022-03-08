@@ -21,8 +21,7 @@
       "~/libs/*": ["libs/*"],
       "~/pages/*": ["pages/*"],
       "~/styles/*": ["styles/*"],
-      "~/utiles/*": ["utiles/*"],
-      "~/public/*": ["../public/*"]
+      "~/utils/*": ["utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

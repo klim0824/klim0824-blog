@@ -21,7 +21,7 @@ type image = {
 
 export type ArticlesList = ListContents<Article>
 
-type Article = Common<{
+export type Article = Common<{
   title?: string
   description?: string
   content?: string
@@ -45,7 +45,7 @@ type Category = Common<{
 
 export type AccountsList = ListContents<Account>
 
-type Account = Common<{
+export type Account = Common<{
   name?: string
   url?: string
   image?: image
