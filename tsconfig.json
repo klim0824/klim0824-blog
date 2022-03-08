@@ -21,7 +21,6 @@
       "~/libs/*": ["libs/*"],
       "~/pages/*": ["pages/*"],
       "~/styles/*": ["styles/*"],
-      "~/theme/*": ["theme/*"],
       "~/utiles/*": ["utiles/*"],
       "~/public/*": ["../public/*"]
     }
