@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app'
 
 import theme from 'libs/styles'
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />

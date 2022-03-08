@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Center, Heading, Link } from '@chakra-ui/react'
 
-const Header = (title: string): JSX.Element => {
+const Header = ({ title }: { title: string | undefined }) => {
   return (
     <Center as="header">
       <Heading as="p" fontSize={28}>
