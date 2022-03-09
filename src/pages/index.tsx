@@ -5,6 +5,7 @@ import { SimpleGrid, VisuallyHidden } from '@chakra-ui/react'
 
 import Layout from 'components/Layout'
 import Card from 'components/Card'
+import generatedRssFeed from 'libs/generatedRssFeed'
 import { fetchArticles, fetchAccounts, fetchMeta } from 'libs/fetchApi'
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
@@ -29,6 +30,8 @@ export const getStaticProps = async () => {
   const articles = await fetchArticles()
   const accounts = await fetchAccounts()
   const meta = await fetchMeta()
+
+  generatedRssFeed(meta, articles.contents)
 
   return {
     props: {
