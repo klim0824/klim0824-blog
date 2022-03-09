@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { InferGetStaticPropsType, NextPage } from 'next'
+import { SimpleGrid, VisuallyHidden } from '@chakra-ui/react'
 
-import Header from 'components/Header'
-import Sidebar from 'components/Sidebar'
-import Footer from 'components/Footer'
+import Layout from 'components/Layout'
 import {
   fetchArticles,
   fetchTags,
@@ -19,11 +18,17 @@ const Home: NextPage<PageProps> = (props) => {
   const { articles, tags, categories, accounts, meta } = props
 
   return (
-    <>
-      <Header title={meta.title} />
-      <Sidebar accounts={accounts} meta={meta} />
-      <Footer name={meta['author-id']} />
-    </>
+    <Layout accounts={accounts} meta={meta}>
+      <VisuallyHidden>
+        <h1>記事一覧</h1>
+      </VisuallyHidden>
+      <SimpleGrid columns={{ base: 1, sm: 2 }} gap={6}>
+        {articles.contents.map(
+          (article) => article.title
+          // <Card article={article} key={article.id}></Card>
+        )}
+      </SimpleGrid>
+    </Layout>
   )
 }
 export const getStaticProps = async () => {
