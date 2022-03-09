@@ -5,18 +5,12 @@ import { SimpleGrid, VisuallyHidden } from '@chakra-ui/react'
 
 import Layout from 'components/Layout'
 import Card from 'components/Card'
-import {
-  fetchArticles,
-  fetchTags,
-  fetchCategories,
-  fetchAccounts,
-  fetchMeta,
-} from 'libs/fetchApi'
+import { fetchArticles, fetchAccounts, fetchMeta } from 'libs/fetchApi'
 
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 const Home: NextPage<PageProps> = (props) => {
-  const { articles, tags, categories, accounts, meta } = props
+  const { articles, accounts, meta } = props
 
   return (
     <Layout accounts={accounts} meta={meta}>
@@ -33,16 +27,12 @@ const Home: NextPage<PageProps> = (props) => {
 }
 export const getStaticProps = async () => {
   const articles = await fetchArticles()
-  const tags = await fetchTags()
-  const categories = await fetchCategories()
   const accounts = await fetchAccounts()
   const meta = await fetchMeta()
 
   return {
     props: {
       articles,
-      tags,
-      categories,
       accounts,
       meta,
     },
