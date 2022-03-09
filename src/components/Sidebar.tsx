@@ -7,7 +7,7 @@ import {
   Flex,
   Image,
   Link,
-  Text,
+  // Text,
   VisuallyHidden,
   Wrap,
   WrapItem,
