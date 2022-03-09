@@ -1,0 +1,14 @@
+{
+  "name": "klim0824.blog()",
+  "short_name": "klim0824",
+  "description": "フロントエンドエンジニアを目指すマークアップエンジニア兼バックエンドエンジニア見習いによるブログ",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#333",
+  "theme_color": "#fff",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
