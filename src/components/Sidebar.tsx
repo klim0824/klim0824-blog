@@ -76,7 +76,7 @@ const Sidebar = ({
         }}
         alignItems={{
           base: 'center',
-          sm: 'flex-end',
+          sm: 'stretch',
           md: 'center',
         }}
         justifyContent="center"
@@ -92,11 +92,12 @@ const Sidebar = ({
               alt="著者アイコン"
             ></Image>
           </Center>
-          <Center pt="2" as="figcaption">
+          <Center as="figcaption" pt="2" lineHeight="1.5">
             {meta.author}
           </Center>
         </Box>
-        <Box
+        <Flex
+          flexDir="column"
           px={{
             base: 0,
             sm: '4',
@@ -104,13 +105,21 @@ const Sidebar = ({
           }}
           pb={1}
         >
-          <Text py="4" align="center" fontSize="sm">
+          <Center
+            as="p"
+            h="100%"
+            py={{
+              base: '0',
+              md: '4',
+            }}
+            fontSize="sm"
+          >
             <span
               dangerouslySetInnerHTML={{
                 __html: meta.description?.replace(/\n/g, '<br>') || '',
               }}
             ></span>
-          </Text>
+          </Center>
           <VisuallyHidden as="h2">著者SNS</VisuallyHidden>
           <Center>
             <Wrap
@@ -155,7 +164,7 @@ const Sidebar = ({
               ))}
             </Wrap>
           </Center>
-        </Box>
+        </Flex>
       </Flex>
       {/* <Flex
         flexDir={{
