@@ -4,6 +4,7 @@ import { InferGetStaticPropsType, NextPage } from 'next'
 import { SimpleGrid, VisuallyHidden } from '@chakra-ui/react'
 
 import Layout from 'components/Layout'
+import Card from 'components/Card'
 import {
   fetchArticles,
   fetchTags,
@@ -23,10 +24,9 @@ const Home: NextPage<PageProps> = (props) => {
         <h1>記事一覧</h1>
       </VisuallyHidden>
       <SimpleGrid columns={{ base: 1, sm: 2 }} gap={6}>
-        {articles.contents.map(
-          (article) => article.title
-          // <Card article={article} key={article.id}></Card>
-        )}
+        {articles.contents.map((article) => (
+          <Card article={article} key={article.id}></Card>
+        ))}
       </SimpleGrid>
     </Layout>
   )
