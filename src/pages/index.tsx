@@ -4,6 +4,7 @@ import { InferGetStaticPropsType, NextPage } from 'next'
 
 import Header from 'components/Header'
 import Sidebar from 'components/Sidebar'
+import Footer from 'components/Footer'
 import {
   fetchArticles,
   fetchTags,
@@ -21,6 +22,7 @@ const Home: NextPage<PageProps> = (props) => {
     <>
       <Header title={meta.title} />
       <Sidebar accounts={accounts} meta={meta} />
+      <Footer name={meta['author-id']} />
     </>
   )
 }
