@@ -71,13 +71,7 @@ const Card = ({ article }: { article: Article }) => {
           </AspectRatio>
         )}
         <Box w="100%" pt="2" px="4" pb="4">
-          <Heading
-            as="h2"
-            size="sm"
-            noOfLines={2}
-            minH={10}
-            lineHeight="var(--chakra-lineHeights-5)"
-          >
+          <Heading as="h2" size="sm" noOfLines={2} minH={10} lineHeight="5">
             <LinkOverlay
               href={
                 '/articles/' +
@@ -92,12 +86,7 @@ const Card = ({ article }: { article: Article }) => {
           {
             // meta descriptionが入力されていればそちらを出力し、無ければ本文の先頭140文字を出力
             article.description ? (
-              <Text
-                minH={20}
-                pt={2}
-                noOfLines={3}
-                lineHeight="var(--chakra-lineHeights-6)"
-              >
+              <Text minH={20} pt={2} noOfLines={3} lineHeight="6">
                 {article.description}
               </Text>
             ) : (
@@ -105,14 +94,14 @@ const Card = ({ article }: { article: Article }) => {
                 minH={20}
                 pt={2}
                 noOfLines={3}
-                lineHeight="var(--chakra-lineHeights-6)"
+                lineHeight="6"
                 dangerouslySetInnerHTML={{
                   __html: summary(article.content),
                 }}
               ></Text>
             )
           }
-          <Flex as="dl" pt={3} lineHeight="var(--chakra-lineHeights-3)">
+          <Flex as="dl" pt={3} lineHeight="3">
             <Box as="dt" pr="2">
               <VisuallyHidden>公開日</VisuallyHidden>
               <Image

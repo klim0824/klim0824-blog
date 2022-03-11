@@ -86,13 +86,13 @@ const Sidebar = ({
           <Center>
             <Image
               src={meta['author-image']?.url}
-              width="128px"
-              height="128px"
+              width="32"
+              height="32"
               borderRadius="full"
               alt="著者アイコン"
             ></Image>
           </Center>
-          <Center as="figcaption" pt="2" lineHeight="1.5">
+          <Center as="figcaption" pt="2" lineHeight="base">
             {meta.author}
           </Center>
         </Box>
