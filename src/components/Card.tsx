@@ -116,7 +116,7 @@ const Card = ({ article }: { article: Article }) => {
             <Box as="dt" pr="2">
               <VisuallyHidden>公開日</VisuallyHidden>
               <Image
-                src="/icons/createdat.svg"
+                src="/icons/created-at.svg"
                 alt=""
                 width="4"
                 height="4"
