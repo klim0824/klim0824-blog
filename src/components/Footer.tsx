@@ -5,7 +5,8 @@ import { Box, Text } from '@chakra-ui/react'
 const Footer = ({ name }: { name: string | undefined }) => {
   const year = new Date()
   const thisYear = year.getFullYear()
-  const GA_TRACKING_ID = process.env.GA_TRACKING_ID || ''
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID ?? ''
+
   return (
     <Box as="footer">
       {GA_TRACKING_ID && (
