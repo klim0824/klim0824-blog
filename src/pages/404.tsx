@@ -30,7 +30,7 @@ const NotFound: NextPage<PageProps> = (props) => {
           boxShadow="sm"
           bg="white"
         >
-          <Heading as="h1" pb="4" textAlign="center">
+          <Heading as="h1" pb="4" textAlign="center" fontSize="2xl">
             404 Page Not Found.
           </Heading>
           <Text textAlign="center">
