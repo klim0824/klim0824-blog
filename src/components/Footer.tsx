@@ -10,7 +10,7 @@ const Footer = ({ name }: { name: string | undefined }) => {
   return (
     <Box as="footer">
       {GA_TRACKING_ID && (
-        <Text textAlign="center" fontSize="sm">
+        <Text textAlign="center" fontSize="xs">
           このサイトはGoogle Analyticsを使用しています。
         </Text>
       )}
