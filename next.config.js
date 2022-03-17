@@ -44,11 +44,11 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/categories',
-        destination: '/',
-        permanent: true,
-      },
+      // {
+      //   source: '/categories',
+      //   destination: '/',
+      //   permanent: true,
+      // },
       {
         source: '/tags',
         destination: '/',

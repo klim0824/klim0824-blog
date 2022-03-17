@@ -39,7 +39,7 @@ type Tag = Common<{
 
 export type CategoriesList = ListContents<Category>
 
-type Category = Common<{
+export type Category = Common<{
   name?: string
 }>
 
