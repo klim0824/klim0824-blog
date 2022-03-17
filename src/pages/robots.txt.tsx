@@ -2,7 +2,7 @@ import React from 'react'
 
 import { NextPageContext } from 'next'
 const getRobots = () => {
-  if (process.env.ROBOT_ALLOW === 'true') {
+  if (process.env.NEXT_PUBLIC_ROBOT_ALLOW === 'allow') {
     return `user-agent: *
 allow: /`
   } else {
