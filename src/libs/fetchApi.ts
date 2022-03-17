@@ -1,4 +1,5 @@
 import client from 'libs/client'
+import { toDateWithDelimiter } from 'utils/date'
 import {
   ArticlesList,
   TagsList,
@@ -11,6 +12,19 @@ export const fetchArticles = async () => {
   const articles = await client.get<ArticlesList>({
     endpoint: 'articles',
     queries: {},
+  })
+  return articles
+}
+
+export const fetchArticlesFilteredByPublishDate = async (
+  publishedAt: string
+) => {
+  const articles = await client.get<ArticlesList>({
+    endpoint: 'articles',
+    queries: {
+      filters:
+        'publishedAt[begins_with]' + toDateWithDelimiter(publishedAt, '-'),
+    },
   })
   return articles
 }
