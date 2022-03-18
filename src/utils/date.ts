@@ -29,8 +29,8 @@ export const toDateWithDelimiter = (
   return (
     yyyyddmm.substring(0, 4) +
     delimiter +
-    yyyyddmm.substring(4, 2) +
+    yyyyddmm.substring(4, 6) +
     delimiter +
-    yyyyddmm.substring(6, 2)
+    yyyyddmm.substring(6)
   )
 }
