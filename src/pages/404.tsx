@@ -41,6 +41,7 @@ const NotFound: NextPage<PageProps> = (props) => {
     </>
   )
 }
+
 export const getStaticProps = async () => {
   const accounts = await fetchAccounts()
   const meta = await fetchMeta()
