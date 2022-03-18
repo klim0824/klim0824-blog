@@ -16,6 +16,10 @@ export const fetchArticles = async () => {
   return articles
 }
 
+/**
+ * @param publishedAt - yyyymmdd
+ * @returns Promise<ArticlesList>
+ */
 export const fetchArticlesFilteredByPublishDate = async (
   publishedAt: string
 ) => {
