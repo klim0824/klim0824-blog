@@ -2,6 +2,7 @@ import client from 'libs/client'
 import { toDateWithDelimiter } from 'utils/date'
 import {
   ArticlesList,
+  Article,
   TagsList,
   CategoriesList,
   AccountsList,
@@ -14,6 +15,14 @@ export const fetchArticles = async () => {
     queries: {},
   })
   return articles
+}
+
+export const fetchArticle = async (id: string) => {
+  const article = await client.get<Article>({
+    endpoint: 'articles',
+    contentId: id,
+  })
+  return article
 }
 
 /**
