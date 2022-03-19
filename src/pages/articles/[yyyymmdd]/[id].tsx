@@ -2,6 +2,9 @@ import React from 'react'
 
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next'
 import { ArticleJsonLd, NextSeo } from 'next-seo'
+import * as cheerio from 'cheerio'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/tomorrow-night-blue.css'
 
 import {
   fetchAccounts,
@@ -97,9 +100,17 @@ export const getStaticPaths = async (): Promise<{
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
   const id = context.params?.id
-  const article = typeof id === 'string' ? await fetchArticle(id) : null
   const accounts = await fetchAccounts()
   const meta = await fetchMeta()
+
+  const article = typeof id === 'string' ? await fetchArticle(id) : null
+  const $ = cheerio.load(article?.content ?? '')
+  $('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text())
+    $(elm).html(result.value)
+    $(elm).addClass('hljs')
+  })
+  article!.content = $.html()
 
   return {
     props: {
