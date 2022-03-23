@@ -73,3 +73,12 @@ export const fetchMeta = async () => {
   })
   return meta
 }
+
+export const fetchDraft = async (id: string, draftKey: string) => {
+  const draft = await client.get<Article>({
+    endpoint: 'articles',
+    contentId: id,
+    queries: { draftKey },
+  })
+  return draft
+}
