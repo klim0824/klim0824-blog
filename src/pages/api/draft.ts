@@ -3,11 +3,10 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { fetchDraft } from 'libs/fetchApi'
 
 const draft = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (!req.query.slug) {
+  const id = req.query.slug
+  if (!id) {
     return res.status(404).send({ message: 'no slug' })
   }
-
-  const id = req.query.id
   const draftKey = req.query.draftKey
   const draft =
     typeof id === 'string' && typeof draftKey === 'string'
@@ -15,7 +14,7 @@ const draft = async (req: NextApiRequest, res: NextApiResponse) => {
       : null
 
   if (!draft) {
-    return res.status(404).send({ message: 'Cannot fewtch draft' })
+    return res.status(404).send({ message: 'Cannot fetch draft' })
   }
 
   res.setPreviewData({
