@@ -9,18 +9,18 @@ const draft = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const id = req.query.id
   const draftKey = req.query.draftKey
-  const article =
+  const draft =
     typeof id === 'string' && typeof draftKey === 'string'
       ? await fetchDraft(id, draftKey)
       : null
 
-  if (!article) {
+  if (!draft) {
     return res.status(404).send({ message: 'Cannot fewtch draft' })
   }
 
   res.setPreviewData({
-    slug: article?.id,
-    draftKey,
+    slug: draft?.id,
+    draftKey: draftKey,
   })
   res.writeHead(307, { Location: `/draft` })
   res.end('Preview mode enabled')
