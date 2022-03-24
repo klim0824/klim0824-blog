@@ -12,11 +12,13 @@ import Layout from 'components/Layout'
 const isDraft = (item: any): item is { draftKey: string } =>
   !!(item?.draftKey && typeof item.draftKey === 'string')
 
+const hasSlug = (item: any): item is { slug: string } =>
+  !!(item?.draftKey && typeof item.draftKey === 'string')
+
 type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 const CategoryPage: NextPage<PageProps> = (props) => {
   const { article, accounts, meta } = props
-  console.log(article)
   const title = '[Preview]' + article?.title + ' | ' + meta.title
 
   return (
@@ -52,11 +54,9 @@ const CategoryPage: NextPage<PageProps> = (props) => {
 }
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const id = context.params?.id ?? ''
-
-  const draftKey = isDraft(context.previewData)
-    ? context.previewData.draftKey
-    : ''
+  const { previewData } = context
+  const id = hasSlug(previewData) ? previewData.slug : ''
+  const draftKey = isDraft(previewData) ? previewData.draftKey : ''
   const draft =
     typeof id === 'string' && typeof draftKey === 'string'
       ? await fetchDraft(id, draftKey)
