@@ -28,7 +28,8 @@ import Hatenabookmark from '../../../public/icons/accounts/hatenabookmark.svg'
 import Pocket from '../../../public/icons/accounts/pocket.svg'
 
 const ArticlePage = ({ meta, article }: { meta: Meta; article: Article }) => {
-  const articleLink = date(article.publishedAt, 'YYYYMMDD') + '/' + article.id
+  const articleLink =
+    'articles/' + date(article.publishedAt, 'YYYYMMDD') + '/' + article.id
   return (
     <Box
       as="article"
