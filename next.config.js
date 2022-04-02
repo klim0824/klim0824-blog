@@ -13,13 +13,17 @@ const nextConfig = {
     domains: ['images.microcms-assets.io'],
     disableStaticImages: true,
   },
-  reactStrictMode: true,
   poweredByHeader: false,
   async headers() {
     return [
       {
         source: '/(.*?)',
         headers: [
+          {
+            key: 'Content-Security-Policy-Report-Only',
+            value:
+              "default-src 'self'; report-uri https://klim0824blog.report-uri.com/r/d/csp/reportOnly",
+          },
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
