@@ -1,6 +1,7 @@
 name = "klim0824-blog"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "out"
 
 [env.production]
 name = "klim0824-blog"
