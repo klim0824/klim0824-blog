@@ -1,0 +1,9 @@
+name = "klim0824-blog"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "klim0824-blog"
+
+[env.production.vars]
+NODE_ENV = "production"
