@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -12,8 +14,8 @@ const nextConfig = {
   images: {
     domains: ['images.microcms-assets.io'],
     disableStaticImages: true,
+    unoptimized: true,
   },
-  reactStrictMode: true,
   poweredByHeader: false,
   async headers() {
     return [
