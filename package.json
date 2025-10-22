@@ -10,7 +10,7 @@
     "lint:fix": "next lint --fix",
     "lint:markup": "markuplint **/*.tsx",
     "format": "prettier --write --ignore-path .gitignore './**/*.{js,jsx,ts,tsx,json,css,scss}'",
-    "pages:build": "next build && next export",
+    "pages:build": "next build && npx next export",
     "preview": "npm run pages:build && wrangler pages dev out",
     "deploy": "npm run pages:build && wrangler pages deploy out"
   },
