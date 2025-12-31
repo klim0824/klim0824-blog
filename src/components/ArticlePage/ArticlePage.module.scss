@@ -59,68 +59,68 @@
       text-decoration: underline;
     }
 
-    &[target='_blank'],
-    &[href$='.pdf'],
-    &[href$='.doc'],
-    &[href$='.docx'],
-    &[href$='.xls'],
-    &[href$='.xlsx'],
-    &[href$='.ppt'],
-    &[href$='.pptx'] {
-      position: relative;
-      &::after {
-        content: '';
-        display: inline-block;
-        position: absolute;
-        bottom: 0.375em; //6
-        margin-inline-start: var(--chakra-space-1);
-        background: no-repeat 50% 50% / contain;
-      }
-    }
+    // &[target='_blank'],
+    // &[href$='.pdf'],
+    // &[href$='.doc'],
+    // &[href$='.docx'],
+    // &[href$='.xls'],
+    // &[href$='.xlsx'],
+    // &[href$='.ppt'],
+    // &[href$='.pptx'] {
+    //   position: relative;
+    //   &::after {
+    //     content: '';
+    //     display: inline-block;
+    //     position: absolute;
+    //     bottom: 0.375em; //6
+    //     margin-inline-start: var(--chakra-space-1);
+    //     background: no-repeat 50% 50% / contain;
+    //   }
+    // }
 
-    &[target='_blank'] {
-      &::after {
-        width: var(--chakra-fontSizes-sm);
-        height: var(--chakra-fontSizes-sm);
-        background-image: url('/icons/files/external-link.svg');
-      }
-    }
+    // &[target='_blank'] {
+    //   &::after {
+    //     width: var(--chakra-fontSizes-sm);
+    //     height: var(--chakra-fontSizes-sm);
+    //     background-image: url('/icons/files/external-link.svg');
+    //   }
+    // }
 
-    &[href$='.pdf'],
-    &[href$='.doc'],
-    &[href$='.docx'],
-    &[href$='.xls'],
-    &[href$='.xlsx'],
-    &[href$='.ppt'],
-    &[href$='.pptx'] {
-      &::after {
-        width: var(--chakra-fontSizes-md);
-        height: var(--chakra-fontSizes-md);
-      }
-    }
-    &[href$='.pdf'] {
-      &::after {
-        background-image: url('/icons/files/pdf.svg');
-      }
-    }
-    &[href$='.doc'],
-    &[href$='.docx'] {
-      &::after {
-        background-image: url('/icons/files/doc.svg');
-      }
-    }
-    &[href$='.xls'],
-    &[href$='.xlsx'] {
-      &::after {
-        background-image: url('/icons/files/spreadsheet.svg');
-      }
-    }
-    &[href$='.ppt'],
-    &[href$='.pptx'] {
-      &::after {
-        background-image: url('/icons/files/ppt.svg');
-      }
-    }
+    // &[href$='.pdf'],
+    // &[href$='.doc'],
+    // &[href$='.docx'],
+    // &[href$='.xls'],
+    // &[href$='.xlsx'],
+    // &[href$='.ppt'],
+    // &[href$='.pptx'] {
+    //   &::after {
+    //     width: var(--chakra-fontSizes-md);
+    //     height: var(--chakra-fontSizes-md);
+    //   }
+    // }
+    // &[href$='.pdf'] {
+    //   &::after {
+    //     background-image: url('/icons/files/pdf.svg');
+    //   }
+    // }
+    // &[href$='.doc'],
+    // &[href$='.docx'] {
+    //   &::after {
+    //     background-image: url('/icons/files/doc.svg');
+    //   }
+    // }
+    // &[href$='.xls'],
+    // &[href$='.xlsx'] {
+    //   &::after {
+    //     background-image: url('/icons/files/spreadsheet.svg');
+    //   }
+    // }
+    // &[href$='.ppt'],
+    // &[href$='.pptx'] {
+    //   &::after {
+    //     background-image: url('/icons/files/ppt.svg');
+    //   }
+    // }
   }
 
   pre {
