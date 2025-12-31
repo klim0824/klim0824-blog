@@ -127,6 +127,10 @@
     white-space: break-spaces;
   }
 
+  img {
+    max-width: 512px;
+  }
+
   iframe[title='YouTube embed'] {
     width: 100%;
   }
