@@ -50,7 +50,7 @@ const ArticlePage = ({ meta, article }: { meta: Meta; article: Article }) => {
                 src={article.mainvisual.url}
                 alt=""
                 // layout={'fill'}
-                objectFit={'contain'}
+                objectFit={'cover'}
               ></Image>
             </AspectRatio>
           )}
